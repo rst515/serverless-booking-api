@@ -8,6 +8,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      AWS_DEFAULT_REGION: eu-west-1
     steps:
       - uses: actions/checkout@v4
 
