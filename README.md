@@ -1,4 +1,6 @@
-# Serverless Booking API (AWS SAM + Python)
+# Serverless Booking API (AWS SAM + FastAPI)
+[![CI](https://img.shields.io/github/actions/workflow/status/rst515/serverless-booking-api/ci.yml)](#)
+[![Python](https://img.shields.io/pypi/pyversions/fastapi)](#)
 
 Serverless demo showcasing:
 - API design with FastAPI on AWS Lambda (via Mangum)
@@ -65,6 +67,13 @@ Example:
   -o src/requirements.txt
 - sam build
 - sam deploy --guided
+
+*Example usage:* 
+```bash
+ curl -X POST http://localhost:3000/bookings -H "Content-Type: application/json" \
+  -d '{"user_id":"u123","start_time":"2025-09-01T10:00:00Z","reminder_lead_seconds":3600}'
+```
+
 
 ## Tests and checks
 
